@@ -1,0 +1,38 @@
+.socials {
+   display: flex;
+
+   &__item {
+      margin-right: rem(31);
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+
+   &__link {
+      width: rem(36);
+      height: rem(36);
+      background-color: $red;
+      border: 1px solid $red;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      
+      &:hover {
+         background-color: white;
+         
+         .socials__icon {
+            fill: $red;
+         }
+      }
+   }
+   
+   &__icon {
+      width: rem(18);
+      height: rem(21);
+      fill: white;
+      transition: 0.3s;
+   }
+}

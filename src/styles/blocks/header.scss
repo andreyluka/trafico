@@ -1,0 +1,17 @@
+.header {
+   padding: rem(50) 0;
+   display: flex;
+   align-items: center;
+   
+   @include tablets {
+      padding: rem(34) 0;
+   }
+
+   &__logo {
+      margin-right: 26.1%;
+      
+      @include laptop {
+         margin-right: auto;
+      }
+   }
+}

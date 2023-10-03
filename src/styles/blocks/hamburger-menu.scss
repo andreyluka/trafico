@@ -1,0 +1,45 @@
+.hamburger-menu {
+   padding: rem(19) rem(3);
+   margin-left: 4.5%;
+   border-radius: rem(5);
+   transition: 0.3s;
+   cursor: pointer;
+   display: none;
+
+   &:hover {
+      background-color: white;
+   }
+
+   @include tablets {
+      display: flex;
+   }
+
+   &__pic {
+      position: relative;
+
+      &,
+      &::before,
+      &::after {
+         width: rem(35);
+         height: rem(6);
+         background-color: $red;
+         border-radius: rem(5);
+         transition: 0.3s;
+      }
+
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         left: 0;
+      }
+
+      &::before {
+         top: 200%;
+      }
+
+      &::after {
+         bottom: 200%;
+      }
+   }
+}

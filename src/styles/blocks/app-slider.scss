@@ -1,0 +1,68 @@
+.app-slider {
+   display: flex;
+   justify-content: flex-end;
+
+   @include tablets {
+      width: 95%;
+      margin: 0 auto;
+      flex-direction: column;
+   }
+
+   &__title {
+      min-width: rem(370);
+      padding-top: rem(44);
+
+      @include phones {
+         margin-bottom: rem(40);
+      }
+   }
+
+   &__container {
+      width: rem(980);
+      padding: rem(44) 0;
+      overflow: hidden;
+      position: relative;
+      
+      @include tablets {
+         width: 100%;
+         padding-left: 0;
+      }
+      
+      @include phones {
+         padding: 0;
+      }
+
+      &::after {
+         content: '';
+         display: block;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         width: rem(100);
+         background: linear-gradient(to right,rgba($pink-light, 0), rgba($pink-light, 0.8));
+
+         @include phones {
+            display: none;
+         }
+      }
+   }
+
+   &__list {
+      display: grid;
+      grid-auto-columns: rem(420);
+      grid-auto-flow: column;
+      column-gap: rem(20);
+      transition: transform 0.5s ease;
+      transform: translateX(0px);
+      
+      @include laptop {
+         grid-auto-columns: rem(350);
+      }
+      
+      @include phones {
+         grid-auto-columns: 100%;
+         column-gap: 4%;
+      }
+   }
+}

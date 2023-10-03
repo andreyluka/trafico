@@ -1,0 +1,40 @@
+.app-button {
+   display: block;
+   padding: 1.25em 1.5em;
+   border-radius: 5px;
+   background: $red;
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: rem(16);
+   font-weight: 700;
+   letter-spacing: 0.05em;
+   white-space: nowrap;
+   position: relative;
+   transition: 0.3s;
+
+   &:hover {
+      color: $red;
+      background: white;
+
+      .app-button__icon {
+         fill: $red;
+      }
+   }
+   
+   &:active {
+      transform: scale(.96);
+   }
+
+   @include tablets {
+      font-size: rem(13);
+   }
+
+   &__icon {
+      width: 1.844em;
+      height: 0.772em;
+      margin-left: 1.2em;
+      fill: white;
+      transition: 0.3s;
+   }
+}

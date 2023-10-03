@@ -1,0 +1,30 @@
+// variables
+
+$bg-color: #FEF8F5;
+$text-color: #402B2B;
+$note-color: #FCDDD4;
+$red: #EE4D47;
+$blue-dark: #0F264C;
+$pink: #FDEDE8;
+$pink-light: #FFF7F5;
+
+
+// breakpoints
+
+$desctop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
+// media
+
+@import "./layout/media.scss";
+
+// layout
+
+@import "./layout/mixins.scss";
+@import "./layout/fonts.scss";
+@import "./layout/layout.scss";
+
+@import "./blocks/*.scss";

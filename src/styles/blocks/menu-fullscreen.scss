@@ -1,0 +1,52 @@
+.menu-fullscreen {
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 40%;
+   bottom: 0;
+   color: white;
+   background-color: $blue-dark;
+   display: none;
+   z-index: 60;
+
+   @include phones {
+      left: 0%;
+   }
+
+   &--active {
+      display: block;
+   }
+   
+   &__button {
+      font-size: rem(16);
+   }
+   
+   &__cross {
+      display: flex;
+      transform: rotateZ(45deg);
+      position: absolute;
+      top: rem(50);
+      right: rem(30);
+      cursor: pointer;
+   
+      &,
+      &:before {
+         content: '';
+         width: rem(40);
+         height: rem(6);
+         border-radius: rem(5);
+         background-color: white;
+         transition: 0.3s;
+      }
+   
+      &:before {
+         transform: rotateZ(90deg);
+      }
+   
+      &:hover {
+         &, &:before {
+            background-color: $red;
+         }
+      }
+   }
+}

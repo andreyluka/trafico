@@ -1,0 +1,20 @@
+.note {
+   padding: 1.25em 2.167em;
+   background: rgba($note-color, 0.4);
+   border-left: rem(10) solid $red;
+   border-radius: 4px;
+   font-size: rem(24);
+   font-weight: 500;
+   line-height: 1.5;
+   
+   @include laptop {
+      font-size: rem(18.2);
+   }
+   
+   &-dark {
+      font-size: rem(20);
+      font-weight: 400;
+      color: white;
+      background: rgba($note-color, 0);
+   }
+}

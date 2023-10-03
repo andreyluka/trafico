@@ -1,0 +1,58 @@
+.reviews {
+   margin-bottom: rem(220);
+
+   @include phones {
+      margin-bottom: rem(140);
+   }
+
+   &__container {
+      width: 95%;
+      max-width: rem(1120);
+      margin: 0 auto;
+   }
+
+   &__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__btns {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+   }
+   
+   &__btn {
+      width: 30px;
+      height: 15.6px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+         transform: scale(1.3);
+      }
+
+      &--disabled {
+         pointer-events: none;
+         opacity: 0.5;
+      }
+
+      &-icon {
+         fill: $red;
+         pointer-events: none;
+      }
+      
+      &-prev {
+         transform: rotate(180deg);
+
+         &:hover {
+            transform: scale(1.3) rotate(180deg);
+         }
+      }
+   }
+
+   &__slider {
+      margin-left: 2%;
+   }
+}

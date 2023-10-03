@@ -1,0 +1,79 @@
+.faq {
+   padding: rem(224) 0 rem(109);
+   margin-bottom: rem(177);
+   position: relative;
+   
+   @include phones {
+      padding: rem(100) 0 rem(90);
+      margin-bottom: rem(140);
+   }
+
+   &::before {
+      content: '';
+      display: block;
+      width: 73.125%;
+      background-color: $pink;
+      border-radius: rem(200) 0 0 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -10;
+   }
+
+   &__container {
+      width: 95%;
+      max-width: rem(1120);
+      margin: 0 auto;
+   }
+   
+   &__head {
+      display: flex;
+      position: relative;
+
+      @include phones {
+         flex-direction: column-reverse;
+      }
+   }
+
+   &__desc {
+      width: 49,1%;
+      margin-bottom: rem(170);
+      
+      @include laptop {
+         margin-bottom: rem(110);
+      }
+      
+      @include tablets {
+         margin-bottom: rem(90);
+      }
+      
+      @include phones {
+         width: 100%;
+         margin-bottom: rem(60);
+         padding-top: rem(50);
+      }
+   }
+
+   &__pic {
+      width: 63.21%;
+      position: absolute;
+      top: -29%;
+      left: 42%;
+      z-index: -10;
+
+      @include desctop {
+         left: 38%;
+      }
+
+      @include phones {
+         width: 100%;
+
+         position: static;
+      }
+   }
+
+   &__title {
+      margin-bottom: rem(44);
+   }
+}

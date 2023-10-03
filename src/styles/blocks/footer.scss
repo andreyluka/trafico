@@ -1,0 +1,14 @@
+.footer {
+   padding: rem(50) 0 rem(90);
+   font-weight: 300;
+   
+   @include tablets {
+      padding: rem(30) 0 rem(30);
+   }
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}

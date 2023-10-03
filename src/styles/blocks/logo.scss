@@ -1,0 +1,10 @@
+.logo {
+   display: block;
+   width: rem(212);
+   height: rem(50);
+   
+   @include tablets {
+      width: rem(180);
+      height: rem(43);
+   }
+}

@@ -1,0 +1,69 @@
+.hero {
+   padding-bottom: 21.54%;
+   margin-bottom: rem(340);
+   background: url('../../images/content/bg-hero.png') left top / cover no-repeat;
+   color: white;
+   position: relative;
+   
+   @include tablets {
+      margin-bottom: rem(230);
+   }
+
+   @include phones {
+      padding-bottom: rem(185);
+      margin-bottom: rem(180);
+   }
+
+   &::before {
+      content: '';
+      display: block;
+      width: 37.9%;
+      height: 41.6%;
+      background: url('../../images/content/mobel.png') left center / contain no-repeat;      
+      position: absolute;
+      bottom: -15.2vw;
+      left: 0%;
+      
+      @include phones {
+         width: rem(325);
+         height: rem(242);
+         bottom: -23.3%;
+      }
+   }
+
+   &__tagline {
+      margin-top: rem(36);
+      
+      @include tablets {
+         margin-top: 0;
+      }
+
+      @include phones {
+         margin-top: rem(26);
+      }
+   }
+   
+   &__title {
+      font-family: 'DMSerifDisplay', Georgia, 'Times New Roman', Times, serif;
+      font-size: rem(100);
+      line-height: 1;
+      margin-bottom: rem(57);
+      white-space: pre-line;
+      
+      @include desctop {
+         font-size: rem(80);
+      }
+      
+      @include laptop {
+         font-size: rem(70);
+      }
+      
+      @include tablets {
+         font-size: rem(50);
+      }
+      
+      @include phones {
+         font-size: rem(45);
+      }
+   }
+}
